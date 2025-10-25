@@ -21,6 +21,7 @@ body {
   z-index: 100;
 }
 
+/* ナビゲーション */
 .nav-menu ul {
   list-style: none;
   margin: 0;
@@ -51,10 +52,20 @@ body {
   width: 100%;
 }
 
+/* JOINボタン（下線除去 & アクティブ時変化） */
 .join-btn {
   border: 1px solid #b87333;
   padding: 0.4rem 1rem;
   border-radius: 5px;
+}
+
+.join-btn::after {
+  display: none !important;
+}
+
+.join-btn:hover {
+  background: #b87333;
+  color: #000;
 }
 
 /* メインビジュアル */
@@ -146,11 +157,59 @@ body {
   filter: brightness(1);
 }
 
-/* レスポンシブ対応 */
+/* ===== ハンバーガーメニュー ===== */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  background: #b87333;
+  border-radius: 2px;
+  transition: all 0.4s;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* ===== レスポンシブ ===== */
 @media (max-width: 768px) {
-  .news-list {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-menu {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: #000;
+    width: 100%;
+    text-align: center;
+    transform: translateY(-200%);
+    transition: transform 0.4s ease;
+  }
+
+  .nav-menu.active {
+    transform: translateY(0);
+  }
+
+  .nav-menu ul {
     flex-direction: column;
-    align-items: center;
+    padding: 1rem 0;
+    gap: 1rem;
   }
 
   .main-logo {
@@ -159,15 +218,6 @@ body {
 }
 
 @media (max-width: 480px) {
-  .nav-menu ul {
-    flex-direction: column;
-    gap: 0.8rem;
-  }
-
-  .join-discord-btn {
-    width: 80%;
-  }
-
   .main-logo {
     width: 70%;
   }
