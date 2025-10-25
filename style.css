@@ -1,0 +1,174 @@
+/* 共通設定 */
+body {
+  margin: 0;
+  background-color: #fdfcf8;
+  color: #333;
+  font-family: 'Special Elite', cursive;
+  text-align: center;
+}
+
+/* ヘッダー */
+.site-header {
+  background-color: #000;
+  color: #b87333;
+  font-family: 'IBM Plex Mono', monospace;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-menu a {
+  color: #b87333;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s;
+}
+
+.nav-menu a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: #b87333;
+  transition: width 0.3s;
+}
+
+.nav-menu a:hover::after {
+  width: 100%;
+}
+
+.join-btn {
+  border: 1px solid #b87333;
+  padding: 0.4rem 1rem;
+  border-radius: 5px;
+}
+
+/* メインビジュアル */
+.main-visual {
+  position: relative;
+  background: url("images/main-visual.jpg") center/cover no-repeat;
+  aspect-ratio: 18/9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-logo {
+  width: 40%;
+  max-width: 400px;
+  z-index: 2;
+}
+
+/* サーバー参加ボタン */
+.join-section {
+  margin: 3rem 0;
+}
+
+.join-discord-btn {
+  display: inline-block;
+  background: #5865F2;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.join-discord-btn:hover {
+  background: #4752C4;
+}
+
+/* ABOUTセクション */
+.about-section {
+  padding: 2rem;
+}
+
+/* NEWSセクション */
+.news-section {
+  padding: 2rem;
+}
+
+.news-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.news-list article {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  width: 280px;
+  padding: 1rem;
+}
+
+/* 動画 */
+.video-section {
+  padding: 2rem;
+}
+
+.video-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+/* フッター */
+.site-footer {
+  background: #000;
+  padding: 2rem;
+  color: #b87333;
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+.social-icons a img {
+  width: 32px;
+  margin: 0 10px;
+  filter: brightness(0.8);
+  transition: filter 0.3s;
+}
+
+.social-icons a img:hover {
+  filter: brightness(1);
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+  .news-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .main-logo {
+    width: 60%;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-menu ul {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .join-discord-btn {
+    width: 80%;
+  }
+
+  .main-logo {
+    width: 70%;
+  }
+}
