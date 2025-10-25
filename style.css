@@ -185,20 +185,23 @@ section, .news-list article {
 }
 
 .join-discord-btn {
-  display: inline-block;
-  font-family: 'IBM Plex Mono', monospace;
-  background: #BF783E;
-  color: white;
+  background: #fff;
+  color: #c1ab05;
+  border: 2px solid #c1ab05;
   padding: 1rem 2rem;
-  border-radius: 50px;
+  border-radius: 12px;
   text-decoration: none;
-  transition: background 0.3s, transform 0.2s;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+  display: inline-block;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
 }
 
 .join-discord-btn:hover {
-  background: #6F5436;
+  background: #c1ab05;
+  color: #fff;
   transform: translateY(-2px);
+  box-shadow: 0 6px 10px rgba(0,0,0,0.15);
 }
 
 /* ABOUTセクション */
