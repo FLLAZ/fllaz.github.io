@@ -1,10 +1,21 @@
 /* 共通設定 */
 body {
   margin: 0;
-  background-color: #fdfcf8;
   color: #333;
   font-family: 'Special Elite', cursive;
   text-align: center;
+  background-color: #fdfcf8;
+  background-image: 
+    radial-gradient(rgba(0,0,0,0.03) 1px, transparent 1px),
+    radial-gradient(rgba(0,0,0,0.02) 1px, transparent 1px);
+  background-size: 12px 12px, 24px 24px;
+  background-position: 0 0, 6px 6px;
+}
+
+/* 紙の質感をさらにリアルに見せるために影を微追加 */
+section, .news-list article {
+  background-color: rgba(255,255,255,0.92);
+  backdrop-filter: blur(2px);
 }
 
 /* ヘッダー */
@@ -76,6 +87,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: inset 0 -40px 80px rgba(0,0,0,0.3);
 }
 
 .main-logo {
@@ -96,11 +108,13 @@ body {
   padding: 1rem 2rem;
   border-radius: 50px;
   text-decoration: none;
-  transition: background 0.3s;
+  transition: background 0.3s, transform 0.2s;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.15);
 }
 
 .join-discord-btn:hover {
   background: #6F5436;
+  transform: translateY(-2px);
 }
 
 /* ABOUTセクション */
@@ -121,11 +135,15 @@ body {
 }
 
 .news-list article {
-  background: #fff;
   border-radius: 10px;
   box-shadow: 0 3px 8px rgba(0,0,0,0.1);
   width: 280px;
   padding: 1rem;
+  transition: transform 0.3s;
+}
+
+.news-list article:hover {
+  transform: translateY(-5px);
 }
 
 /* 動画 */
