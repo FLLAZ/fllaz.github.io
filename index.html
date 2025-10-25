@@ -11,7 +11,15 @@
   <!-- ヘッダー -->
   <header class="site-header">
     <div class="logo">TOOL HUB</div>
-    <nav class="nav-menu">
+
+    <!-- ハンバーガーメニュー -->
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <nav class="nav-menu" id="nav-menu">
       <ul>
         <li><a href="#about">ABOUT</a></li>
         <li><a href="#news">NEWS</a></li>
@@ -76,5 +84,16 @@
     </div>
     <p class="copyright">© 2025 TOOL HUB All Rights Reserved.</p>
   </footer>
+
+  <script>
+    // ハンバーガーメニュー動作
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navMenu.classList.toggle('active');
+    });
+  </script>
 </body>
 </html>
