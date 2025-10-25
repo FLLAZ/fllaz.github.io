@@ -14,15 +14,8 @@
   transition: opacity 1s ease;
 }
 
-.typewriter {
-  display: inline-flex;
-  align-items: center;
-}
-
 .cursor {
   margin-left: 5px;
-  opacity: 1;
-  transition: opacity 0.3s;
 }
 
 .cursor.blink {
@@ -37,6 +30,55 @@
 #loading-screen.fade-out {
   opacity: 0;
   pointer-events: none;
+}
+
+/* ===== ページフェードイン ===== */
+.hidden {
+  opacity: 0;
+}
+
+.fade-in {
+  animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== 各要素の浮き上がり ===== */
+.fade-element {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-element.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* メインビジュアルに軽い影を */
+.main-visual {
+  background: url("images/main-visual.jpg") center/cover no-repeat;
+  aspect-ratio: 18/9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 0 -40px 80px rgba(0,0,0,0.3);
+}
+
+.main-logo {
+  width: 40%;
+  max-width: 400px;
+  z-index: 2;
+  opacity: 0;
+  animation: fadeUp 1.6s ease forwards 0.5s;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 /* 共通設定 */
