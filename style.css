@@ -186,6 +186,7 @@ section, .news-list article {
 
 .join-discord-btn {
   display: inline-block;
+  font-family: 'IBM Plex Mono', monospace;
   background: #BF783E;
   color: white;
   padding: 1rem 2rem;
