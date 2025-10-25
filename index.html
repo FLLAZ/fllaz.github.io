@@ -8,87 +8,127 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- ヘッダー -->
-  <header class="site-header">
-    <div class="logo">FLLAZ</div>
-
-    <!-- ハンバーガーメニュー -->
-    <div class="hamburger" id="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
+  <!-- ロード画面 -->
+  <div id="loading-screen">
+    <div class="typewriter">
+      <span id="type-text"></span><span class="cursor">|</span>
     </div>
+  </div>
 
-    <nav class="nav-menu" id="nav-menu">
-      <ul>
-        <li><a href="#about">ABOUT</a></li>
-        <li><a href="#news">NEWS</a></li>
-        <li><a href="https://dsc.gg/fllaz" class="join-btn">JOIN</a></li>
-      </ul>
-    </nav>
-  </header>
+  <!-- メインコンテンツ -->
+  <div id="main-content" style="display:none;">
+    <!-- ヘッダー -->
+    <header class="site-header">
+      <div class="logo">FLLAZ</div>
 
-  <!-- メインビジュアル -->
-  <section class="main-visual">
-    <div class="overlay"></div>
-    <img src="images/logo.png" alt="FLLAZ Logo" class="main-logo" />
-  </section>
+      <!-- ハンバーガーメニュー -->
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
 
-  <!-- サーバー参加ボタン -->
-  <section id="join" class="join-section">
-    <a href="https://dsc.gg/fllaz" target="_blank" class="join-discord-btn">Join to FLLAZ!!</a>
-  </section>
+      <nav class="nav-menu" id="nav-menu">
+        <ul>
+          <li><a href="#about">ABOUT</a></li>
+          <li><a href="#news">NEWS</a></li>
+          <li><a href="https://dsc.gg/fllaz" class="join-btn">JOIN</a></li>
+        </ul>
+      </nav>
+    </header>
 
-  <!-- ABOUTセクション -->
-  <section id="about" class="about-section">
-    <h2>ABOUT</h2>
-    <p>このDiscordサーバーは、ツール配布や雑談を中心に交流できる場所です。2025年10月に設立され、誰でも自由に参加できます。</p>
-  </section>
+    <!-- メインビジュアル -->
+    <section class="main-visual">
+      <div class="overlay"></div>
+      <img src="images/logo.png" alt="FLLAZ Logo" class="main-logo" />
+    </section>
 
-  <!-- NEWSセクション -->
-  <section id="news" class="news-section">
-    <h2>NEWS</h2>
-    <div class="news-list">
-      <article>
-        <h3>🎉 新サーバー公開！</h3>
-        <p>2025年10月、TOOL HUBが正式にオープンしました。</p>
-      </article>
-      <article>
-        <h3>🛠 新ツール配布開始</h3>
-        <p>最新の自動化ツールを配布中！詳細はサーバー内チャンネルで。</p>
-      </article>
-      <article>
-        <h3>💬 イベント告知</h3>
-        <p>11月の雑談イベントをお楽しみに！</p>
-      </article>
-    </div>
-  </section>
+    <!-- サーバー参加ボタン -->
+    <section id="join" class="join-section">
+      <a href="https://discord.gg/your-invite-link" target="_blank" class="join-discord-btn">Join to FLLAZ!!</a>
+    </section>
 
-  <!-- 紹介動画 -->
-  <section id="video" class="video-section">
-    <h2>YouTube</h2>
-    <div class="video-wrapper">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/XXXXXXXXXXX" 
-        title="YouTube video player" frameborder="0" allowfullscreen></iframe>
-    </div>
-  </section>
+    <!-- ABOUTセクション -->
+    <section id="about" class="about-section">
+      <h2>ABOUT</h2>
+      <p>このDiscordサーバーは、ツール配布や雑談を中心に交流できる場所です。2025年10月に設立され、誰でも自由に参加できます。</p>
+    </section>
 
-  <!-- フッター -->
-  <footer class="site-footer">
-    <div class="social-icons">
-      <a href="#"><img src="images/x-icon.png" alt="X"></a>
-      <a href="#"><img src="images/instagram-icon.png" alt="Instagram"></a>
-      <a href="#"><img src="images/facebook-icon.png" alt="Facebook"></a>
-      <a href="#"><img src="images/line-icon.png" alt="LINE"></a>
-    </div>
-    <p class="copyright">© 2025 FLLAZ All Rights Reserved.</p>
-  </footer>
+    <!-- NEWSセクション -->
+    <section id="news" class="news-section">
+      <h2>NEWS</h2>
+      <div class="news-list">
+        <article>
+          <h3>🎉 新サーバー公開！</h3>
+          <p>2025年10月、TOOL HUBが正式にオープンしました。</p>
+        </article>
+        <article>
+          <h3>🛠 新ツール配布開始</h3>
+          <p>最新の自動化ツールを配布中！詳細はサーバー内チャンネルで。</p>
+        </article>
+        <article>
+          <h3>💬 イベント告知</h3>
+          <p>11月の雑談イベントをお楽しみに！</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- 紹介動画 -->
+    <section id="video" class="video-section">
+      <h2>Youube</h2>
+      <div class="video-wrapper">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/XXXXXXXXXXX" 
+          title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <!-- フッター -->
+    <footer class="site-footer">
+      <div class="social-icons">
+        <a href="#"><img src="images/x-icon.png" alt="X"></a>
+        <a href="#"><img src="images/instagram-icon.png" alt="Instagram"></a>
+        <a href="#"><img src="images/facebook-icon.png" alt="Facebook"></a>
+        <a href="#"><img src="images/line-icon.png" alt="LINE"></a>
+      </div>
+      <p class="copyright">© 2025 FLLAZ All Rights Reserved.</p>
+    </footer>
+  </div>
 
   <script>
-    // ハンバーガーメニュー動作
+    // === ロード画面 タイプライター効果 ===
+    const text = "FLLAZ";
+    const typeText = document.getElementById("type-text");
+    const cursor = document.querySelector(".cursor");
+    const loadingScreen = document.getElementById("loading-screen");
+    const mainContent = document.getElementById("main-content");
+
+    let index = 0;
+    function typeWriter() {
+      if (index < text.length) {
+        typeText.textContent += text.charAt(index);
+        index++;
+        setTimeout(typeWriter, 200); // 文字速度
+      } else {
+        cursor.classList.add("blink");
+        setTimeout(() => {
+          loadingScreen.classList.add("fade-out");
+          setTimeout(() => {
+            loadingScreen.style.display = "none";
+            mainContent.style.display = "block";
+            document.body.style.overflow = "auto";
+          }, 1000);
+        }, 800);
+      }
+    }
+
+    window.addEventListener("load", () => {
+      document.body.style.overflow = "hidden";
+      typeWriter();
+    });
+
+    // === ハンバーガーメニュー ===
     const hamburger = document.getElementById('hamburger');
     const navMenu = document.getElementById('nav-menu');
-
     hamburger.addEventListener('click', () => {
       hamburger.classList.toggle('active');
       navMenu.classList.toggle('active');
