@@ -251,17 +251,6 @@ section, .news-list article {
   font-family: 'IBM Plex Mono', monospace;
 }
 
-.social-icons a img {
-  width: 32px;
-  margin: 0 10px;
-  filter: brightness(0.8);
-  transition: filter 0.3s;
-}
-
-.social-icons a img:hover {
-  filter: brightness(1);
-}
-
 /* ===== ハンバーガーメニュー ===== */
 .hamburger {
   display: none;
