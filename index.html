@@ -16,7 +16,7 @@
   </div>
 
   <!-- メインコンテンツ -->
-  <div id="main-content" style="display:none;">
+  <div id="main-content" class="hidden">
     <!-- ヘッダー -->
     <header class="site-header">
       <div class="logo">FLLAZ</div>
@@ -38,24 +38,23 @@
     </header>
 
     <!-- メインビジュアル -->
-    <section class="main-visual">
-      <div class="overlay"></div>
+    <section class="main-visual fade-element">
       <img src="images/logo.png" alt="FLLAZ Logo" class="main-logo" />
     </section>
 
     <!-- サーバー参加ボタン -->
-    <section id="join" class="join-section">
-      <a href="https://discord.gg/your-invite-link" target="_blank" class="join-discord-btn">Join to FLLAZ!!</a>
+    <section id="join" class="join-section fade-element">
+      <a href="https://discord.gg/your-invite-link" target="_blank" class="join-discord-btn">サーバーに参加する</a>
     </section>
 
-    <!-- ABOUTセクション -->
-    <section id="about" class="about-section">
+    <!-- ABOUT -->
+    <section id="about" class="about-section fade-element">
       <h2>ABOUT</h2>
       <p>このDiscordサーバーは、ツール配布や雑談を中心に交流できる場所です。2025年10月に設立され、誰でも自由に参加できます。</p>
     </section>
 
-    <!-- NEWSセクション -->
-    <section id="news" class="news-section">
+    <!-- NEWS -->
+    <section id="news" class="news-section fade-element">
       <h2>NEWS</h2>
       <div class="news-list">
         <article>
@@ -73,9 +72,9 @@
       </div>
     </section>
 
-    <!-- 紹介動画 -->
-    <section id="video" class="video-section">
-      <h2>Youube</h2>
+    <!-- 動画 -->
+    <section id="video" class="video-section fade-element">
+      <h2>Youtube</h2>
       <div class="video-wrapper">
         <iframe width="560" height="315" src="https://www.youtube.com/embed/XXXXXXXXXXX" 
           title="YouTube video player" frameborder="0" allowfullscreen></iframe>
@@ -83,7 +82,7 @@
     </section>
 
     <!-- フッター -->
-    <footer class="site-footer">
+    <footer class="site-footer fade-element">
       <div class="social-icons">
         <a href="#"><img src="images/x-icon.png" alt="X"></a>
         <a href="#"><img src="images/instagram-icon.png" alt="Instagram"></a>
@@ -95,7 +94,7 @@
   </div>
 
   <script>
-    // === ロード画面 タイプライター効果 ===
+    // === タイプライター効果 ===
     const text = "FLLAZ";
     const typeText = document.getElementById("type-text");
     const cursor = document.querySelector(".cursor");
@@ -107,15 +106,20 @@
       if (index < text.length) {
         typeText.textContent += text.charAt(index);
         index++;
-        setTimeout(typeWriter, 200); // 文字速度
+        setTimeout(typeWriter, 200);
       } else {
         cursor.classList.add("blink");
         setTimeout(() => {
           loadingScreen.classList.add("fade-out");
           setTimeout(() => {
             loadingScreen.style.display = "none";
-            mainContent.style.display = "block";
-            document.body.style.overflow = "auto";
+            mainContent.classList.remove("hidden");
+            mainContent.classList.add("fade-in");
+            document.querySelectorAll('.fade-element').forEach((el, i) => {
+              setTimeout(() => {
+                el.classList.add('show');
+              }, 300 + i * 150);
+            });
           }, 1000);
         }, 800);
       }
