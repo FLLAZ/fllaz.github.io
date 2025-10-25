@@ -113,6 +113,7 @@
           loadingScreen.classList.add("fade-out");
           setTimeout(() => {
             loadingScreen.style.display = "none";
+            document.body.style.overflow = "auto";
             mainContent.classList.remove("hidden");
             mainContent.classList.add("fade-in");
             document.querySelectorAll('.fade-element').forEach((el, i) => {
