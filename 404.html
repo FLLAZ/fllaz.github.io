@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>404 - NotFound</title>
+  <title>404 - Not Found</title>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Special+Elite&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -15,7 +15,12 @@
     </div>
   </div>
 
-<div class="hamburger" id="hamburger">
+  <!-- 全体コンテンツ -->
+  <div id="main-content" class="hidden">
+
+    <!-- ヘッダー -->
+    <header>
+      <div class="hamburger" id="hamburger">
         <span></span>
         <span></span>
         <span></span>
@@ -29,19 +34,22 @@
         </ul>
       </nav>
     </header>
-  
-<body>
-  <h1>404 - NotFound</h1>
-  <p>You will be redirected to the top page in 5 seconds.</p>
-  <div class="count" id="count">5</div>
-  <a href="/">Return now</a>
 
-<footer class="site-footer fade-element">
-  <p class="copyright">© 2025 FLLAZ All Rights Reserved.</p>
-</footer>
-</div>
+    <!-- メイン部分 -->
+    <main>
+      <h1>404 - Not Found</h1>
+      <p>You will be redirected to the top page in 5 seconds.</p>
+      <div class="count" id="count">5</div>
+      <a href="/">Return now</a>
+    </main>
 
-  
+    <!-- フッター -->
+    <footer class="site-footer fade-element">
+      <p class="copyright">© 2025 FLLAZ All Rights Reserved.</p>
+    </footer>
+  </div>
+
+  <!-- スクリプト -->
   <script>
     const text = "FLLAZ";
     const typeText = document.getElementById("type-text");
@@ -65,9 +73,7 @@
             mainContent.classList.remove("hidden");
             mainContent.classList.add("fade-in");
             document.querySelectorAll('.fade-element').forEach((el, i) => {
-              setTimeout(() => {
-                el.classList.add('show');
-              }, 300 + i * 150);
+              setTimeout(() => el.classList.add('show'), 300 + i * 150);
             });
           }, 1000);
         }, 800);
@@ -78,18 +84,18 @@
       document.body.style.overflow = "hidden";
       typeWriter();
     });
-    
+
     const hamburger = document.getElementById('hamburger');
     const navMenu = document.getElementById('nav-menu');
     hamburger.addEventListener('click', () => {
       hamburger.classList.toggle('active');
       navMenu.classList.toggle('active');
     });
-    
+
+    // 自動リダイレクト
     let sec = 5;
     const el = document.getElementById('count');
-    const url = '/'; // ホームURL
-
+    const url = '/';
     const timer = setInterval(() => {
       sec--;
       el.textContent = sec;
