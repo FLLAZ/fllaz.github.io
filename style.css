@@ -207,7 +207,7 @@ section, .news-list article {
 /* ABOUTセクション */
 .about-section {
   padding: 2rem;
-  text-align: left;
+  text-align: justify;
   display: inline-block;
 }
 
