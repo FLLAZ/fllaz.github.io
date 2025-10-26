@@ -212,6 +212,7 @@ section, .news-list article {
 /* NEWSセクション */
 .aboutus-section {
   padding: 2rem;
+  text-align: left;
 }
 
 .aboutus-list {
