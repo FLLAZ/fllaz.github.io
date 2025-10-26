@@ -205,23 +205,23 @@ section, .news-list article {
 }
 
 /* ABOUTセクション */
-.about-section {
+.statement-section {
   padding: 2rem;
 }
 
 /* NEWSセクション */
-.aboutus-section {
+.about-section {
   padding: 2rem;
 }
 
-.aboutus-list {
+.about-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 1.5rem;
 }
 
-.aboutus-list article {
+.about-list article {
   border-radius: 10px;
   box-shadow: 0 3px 8px rgba(0,0,0,0.1);
   width: 280px;
@@ -229,7 +229,7 @@ section, .news-list article {
   transition: transform 0.3s;
 }
 
-.aboutus-list article:hover {
+.about-list article:hover {
   transform: translateY(-5px);
 }
 
