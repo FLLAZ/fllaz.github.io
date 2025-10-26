@@ -15,11 +15,11 @@
     </div>
   </div>
 
-  <!-- 全体コンテンツ -->
+  <!-- メインコンテンツ -->
   <div id="main-content" class="hidden">
 
-    <!-- ヘッダー -->
-    <header>
+    <!-- ✅ ヘッダー（クラス名追加！） -->
+    <header class="site-header fade-element">
       <div class="hamburger" id="hamburger">
         <span></span>
         <span></span>
@@ -35,7 +35,7 @@
       </nav>
     </header>
 
-    <!-- メイン部分 -->
+    <!-- メインエリア -->
     <main>
       <h1>404 - Not Found</h1>
       <p>You will be redirected to the top page in 5 seconds.</p>
@@ -43,7 +43,7 @@
       <a href="/">Return now</a>
     </main>
 
-    <!-- フッター -->
+    <!-- ✅ フッター（共通デザイン） -->
     <footer class="site-footer fade-element">
       <p class="copyright">© 2025 FLLAZ All Rights Reserved.</p>
     </footer>
@@ -85,6 +85,7 @@
       typeWriter();
     });
 
+    // ハンバーガーメニュー
     const hamburger = document.getElementById('hamburger');
     const navMenu = document.getElementById('nav-menu');
     hamburger.addEventListener('click', () => {
