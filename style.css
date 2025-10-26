@@ -208,7 +208,6 @@ section, .news-list article {
 .about-section {
   padding: 2rem;
   text-align: justify;
-  display: inline-block;
 }
 
 /* NEWSセクション */
