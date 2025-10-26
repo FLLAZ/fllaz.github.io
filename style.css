@@ -207,12 +207,12 @@ section, .news-list article {
 /* ABOUTセクション */
 .about-section {
   padding: 2rem;
+  text-align: left;
 }
 
 /* NEWSセクション */
 .aboutus-section {
   padding: 2rem;
-  text-align: left;
 }
 
 .aboutus-list {
